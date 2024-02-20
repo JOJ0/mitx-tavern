@@ -92,20 +92,13 @@ type Mutation{
 // The root provides a resolver function for each API endpoint
 
 var root = {
-  restaurant: (arg) => {
-    // Your code goes here
-  },
-  restaurants: () => {
-    // Your code goes here
-  },
+  restaurant: (arg) => restaurants[arg.id],
+  restaurants: () => restaurants,
   setrestaurant: ({ input }) => {
-    // Your code goes here
   },
   deleterestaurant: ({ id }) => {
-    // Your code goes here
   },
   editrestaurant: ({ id, ...restaurant }) => {
-    // Your code goes here
   },
 };
 var app = express();
